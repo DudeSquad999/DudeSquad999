@@ -1,0 +1,135 @@
+
+aak aak <aakgaming2011@gmail.com>
+Thu, Aug 8, 12:16 PM (10 days ago)
+to Eliyah
+
+import tkinter as tk
+import random
+
+class ConnectFour:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Connect Four")
+
+        self.current_piece = 'X'
+        self.board = self.create_board()
+        self.buttons = [[None for _ in range(7)] for _ in range(6)]
+
+        self.create_widgets()
+        self.update_board()
+
+    def create_board(self):
+        """Create a 6x7 Connect Four board."""
+        return [[' ' for _ in range(7)] for _ in range(6)]
+
+    def create_widgets(self):
+        """Create the game board GUI."""
+        for row in range(6):
+            for col in range(7):
+                button = tk.Button(self.root, width=6, height=3, command=lambda r=row, c=col: self.drop_piece(c))
+                button.grid(row=row, column=col)
+                self.buttons[row][col] = button
+
+        self.info_label = tk.Label(self.root, text="Player X's turn")
+        self.info_label.grid(row=6, column=0, columnspan=7)
+
+    def drop_piece(self, col):
+        """Drop a piece into the specified column."""
+        if not self.is_valid_column(col):
+            return
+       
+        for row in reversed(range(6)):
+            if self.board[row][col] == ' ':
+                self.board[row][col] = self.current_piece
+                self.update_board()
+                if self.is_winning_move(self.current_piece):
+                    self.info_label.config(text=f"Player {self.current_piece} wins!")
+                    self.disable_buttons()
+                elif self.is_full():
+                    self.info_label.config(text="It's a tie!")
+                    self.disable_buttons()
+                else:
+                    self.current_piece = 'O' if self.current_piece == 'X' else 'X'
+                    self.info_label.config(text=f"Player {self.current_piece}'s turn")
+                    if self.current_piece == 'O':
+                        self.ai_move()
+                break
+
+    def ai_move(self):
+        """Make a move for the AI."""
+        valid_moves = [c for c in range(7) if self.is_valid_column(c)]
+        col = random.choice(valid_moves)
+        self.drop_piece(col)
+
+    def is_valid_column(self, col):
+        """Check if the column is valid for a move."""
+        return 0 <= col < 7 and self.board[0][col] == ' '
+
+    def drop_piece(self, col):
+        """Drop a piece into the specified column."""
+        if not self.is_valid_column(col):
+            return
+       
+        for row in reversed(range(6)):
+            if self.board[row][col] == ' ':
+                self.board[row][col] = self.current_piece
+                self.update_board()
+                if self.is_winning_move(self.current_piece):
+                    self.info_label.config(text=f"Player {self.current_piece} wins!")
+                    self.disable_buttons()
+                elif self.is_full():
+                    self.info_label.config(text="It's a tie!")
+                    self.disable_buttons()
+                else:
+                    self.current_piece = 'O' if self.current_piece == 'X' else 'X'
+                    self.info_label.config(text=f"Player {self.current_piece}'s turn")
+                    if self.current_piece == 'O':
+                        self.ai_move()
+                break
+
+    def is_winning_move(self, piece):
+        """Check if the last move is a winning move."""
+        for row in range(6):
+            for col in range(7):
+                if (self.check_direction(piece, row, col, 0, 1) or  # Horizontal
+                    self.check_direction(piece, row, col, 1, 0) or  # Vertical
+                    self.check_direction(piece, row, col, 1, 1) or  # Diagonal /
+                    self.check_direction(piece, row, col, 1, -1)):  # Diagonal \
+                    return True
+        return False
+
+    def check_direction(self, piece, row, col, row_delta, col_delta):
+        """Check if there are four in a row in the specified direction."""
+        count = 0
+        for _ in range(4):
+            r = row + row_delta * count
+            c = col + col_delta * count
+            if 0 <= r < 6 and 0 <= c < 7 and self.board[r][c] == piece:
+                count += 1
+            else:
+                return False
+        return count == 4
+
+    def is_full(self):
+        """Check if the board is full."""
+        return all(self.board[0][col] != ' ' for col in range(7))
+
+    def update_board(self):
+        """Update the board GUI to reflect the current state."""
+        for row in range(6):
+            for col in range(7):
+                self.buttons[row][col].config(text=self.board[row][col], bg='lightblue' if self.board[row][col] == ' ' else ('red' if self.board[row][col] == 'X' else 'yellow'))
+
+    def disable_buttons(self):
+        """Disable all buttons on the board."""
+        for row in range(6):
+            for col in range(7):
+                self.buttons[row][col].config(state=tk.DISABLED)
+
+def main():
+    root = tk.Tk()
+    ConnectFour(root)
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
