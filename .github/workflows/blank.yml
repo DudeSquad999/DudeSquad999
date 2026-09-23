@@ -1,0 +1,72 @@
+name: Prism-Ai Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test Prism-Ai on Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [ "3.10", "3.11", "3.12" ]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Check Python files compile
+        run: |
+          python -m compileall -q Prism-Ai-Advanced-Learning
+
+      - name: Run Prism-Ai tests
+        working-directory: Prism-Ai-Advanced-Learning
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Verify important project files exist
+        run: |
+          test -f Prism-Ai-Advanced-Learning/chat.py
+          test -f Prism-Ai-Advanced-Learning/README.md
+          test -f Prism-Ai-Advanced-Learning/HOW_TO_USE_PRISM.txt
+          test -f Prism-Ai-Advanced-Learning/facts.py
+          test -f Prism-Ai-Advanced-Learning/memory.py
+          test -f Prism-Ai-Advanced-Learning/engine.py
+          test -d Prism-Ai-Advanced-Learning/tests
+
+      - name: Create release ZIP artifact
+        run: |
+          cd Prism-Ai-Advanced-Learning
+          zip -r ../Prism-Ai-Advanced-Learning.zip . \
+            -x "prism_memory.json" \
+            -x "prism_pending.json" \
+            -x "prism_backup.json" \
+            -x "prism_export.json" \
+            -x "prism_facts.csv" \
+            -x "__pycache__/*" \
+            -x "tests/__pycache__/*"
+
+      - name: Upload tested ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Prism-Ai-Advanced-Learning-Python-${{ matrix.python-version }}
+          path: Prism-Ai-Advanced-Learning.zip
+          if-no-files-found: error
+          retention-days: 14
