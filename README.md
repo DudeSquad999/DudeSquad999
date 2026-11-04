@@ -1,4 +1,4 @@
-# Hi, I’m Aidan
+# Hi,
 
 I’m the developer behind Prism AI, an early-stage workspace for research,
 conversations, and writing.
