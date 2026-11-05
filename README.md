@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/DudeSquad999/Prism-Ai">
-    <img src="https://raw.githubusercontent.com/DudeSquad999/Prism-Ai/mainn/prism-banner.png" alt="Prism AI, a workspace for research and writing" width="100%">
+    <img src="https://raw.githubusercontent.com/DudeSquad999/Prism-Ai/main/prism-banner.png" alt="Prism AI, a workspace for research and writing" width="100%">
   </a>
   <h1>Hi, I'm Aidan.</h1>
   <p><strong>Building Prism AI, a local-first research and writing workspace for Windows.</strong></p>
@@ -32,9 +32,9 @@ Prism AI 3.1.0 supports local models through Ollama and cloud providers includin
 
 ## Try Prism
 
-- **Windows app:** [Download Prism AI 3.1.0](https://github.com/DudeSquad999/Prism-Ai/releases/download/v3.1.0/Prism-3.1.0.exe) or [read the installation guide](https://github.com/DudeSquad999/Prism-Ai/blob/mainn/docs/installation.md).
+- **Windows app:** [Download Prism AI 3.1.0](https://github.com/DudeSquad999/Prism-Ai/releases/download/v3.1.0/Prism-3.1.0.exe) or [read the installation guide](https://github.com/DudeSquad999/Prism-Ai/blob/main/docs/installation.md).
 - **Browser preview:** [Explore the interface](https://dudesquad999.github.io/Prism-Ai/). It uses fixed examples and does not connect to AI models or replace the Windows apps.
-- **Learn more:** Read about [research and notes](https://github.com/DudeSquad999/Prism-Ai/blob/mainn/docs/research-workflow.md), [LaTeX writing](https://github.com/DudeSquad999/Prism-Ai/blob/mainn/docs/latex-workflow.md), and [release changes](https://github.com/DudeSquad999/Prism-Ai/blob/mainn/CHANGELOG.md).
+- **Learn more:** Read about [research and notes](https://github.com/DudeSquad999/Prism-Ai/blob/main/docs/research-workflow.md), [LaTeX writing](https://github.com/DudeSquad999/Prism-Ai/blob/main/docs/latex-workflow.md), and [release changes](https://github.com/DudeSquad999/Prism-Ai/blob/main/CHANGELOG.md).
 
 > Prism AI is early-stage software. AI responses and citations can be wrong, so check important claims and references. Local model inference runs on your computer after setup, but some features still need internet access. Cloud requests containing your content go to the provider you configure.
 
