@@ -1,0 +1,54 @@
+name: Profile README validation
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-readme-links:
+    name: Check Prism AI README links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify Prism AI banner and documentation links
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          from urllib.request import urlopen
+
+          readme = Path("README.md").read_text(encoding="utf-8")
+          banner_match = re.search(
+              r'<img\s+src="(https://raw\.githubusercontent\.com/DudeSquad999/Prism-Ai/Main/prism-banner\.png)"',
+              readme,
+          )
+          if not banner_match:
+              raise SystemExit("README.md is missing the canonical Prism AI banner URL.")
+
+          urls = [banner_match.group(1)]
+          urls.extend(
+              re.findall(
+                  r"https://github\.com/DudeSquad999/Prism-Ai/blob/Main/[^\s)]+",
+                  readme,
+              )
+          )
+          if len(urls) < 2:
+              raise SystemExit("README.md is missing Prism AI documentation links.")
+
+          for url in urls:
+              with urlopen(url, timeout=30) as response:
+                  if response.status != 200:
+                      raise SystemExit(f"Unexpected status {response.status} for {url}")
+                  if url == banner_match.group(1) and response.headers.get_content_type() != "image/png":
+                      raise SystemExit(f"Banner URL did not return a PNG image: {url}")
+              print(f"OK {url}")
+          PY
