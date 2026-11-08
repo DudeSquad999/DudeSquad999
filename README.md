@@ -30,6 +30,10 @@ Prism AI 3.1.0 supports local models through Ollama and cloud providers includin
 - Improving the product, browser preview, and documentation.
 - Being clear about what works, what is still early, and what needs improvement.
 
+## Certifications
+
+- **[Canva AI Essentials 2026](https://github.com/DudeSquad999/DudeSquad999/blob/main/ai-essentials-2026-certificate.pdf)** — Certificate of completion.
+
 ## Try Prism
 
 - **Windows app:** [Download Prism AI 3.1.0](https://github.com/DudeSquad999/Prism-Ai/releases/download/v3.1.0/Prism-3.1.0.exe) or [read the installation guide](https://github.com/DudeSquad999/Prism-Ai/blob/Main/docs/installation.md).
