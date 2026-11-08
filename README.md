@@ -32,7 +32,7 @@ Prism AI 3.1.0 supports local models through Ollama and cloud providers includin
 
 ## Certifications
 
-- **[Canva AI Essentials 2026](https://github.com/DudeSquad999/DudeSquad999/blob/main/ai-essentials-2026-certificate.pdf)** — Certificate of completion.
+- **AI Essentials 2026** — Certificate of completion, issued November 8, 2026. [View certificate (PDF)](https://github.com/DudeSquad999/DudeSquad999/blob/main/ai-essentials-2026-certificate.pdf) · Credential ID: `20c551`.
 
 ## Try Prism
 
