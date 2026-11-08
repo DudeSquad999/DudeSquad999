@@ -8,6 +8,8 @@
     <a href="https://github.com/DudeSquad999/Prism-Ai/releases/tag/v3.1.0">Get Prism AI 3.1.0</a>
     · <a href="https://github.com/DudeSquad999/Prism-Ai">Explore the project</a>
     · <a href="https://dudesquad999.github.io/Prism-Ai/">Try the browser preview</a>
+    · <a href="https://www.instagram.com/prismhq.ai/">Instagram</a>
+    · <a href="https://www.reddit.com/r/PrismAIApp/">Community</a>
   </p>
   <p>
     <a href="https://www.instagram.com/prismhq.ai/">Product updates on Instagram</a>
@@ -52,7 +54,7 @@ Prism AI 3.1.0 supports local models through Ollama and cloud providers includin
 
 Found a bug or have an idea? [Open an issue](https://github.com/DudeSquad999/Prism-Ai/issues) and include what you tried, what you expected, and what happened. Please leave out API keys, passwords, private research, and personal information.
 
-[Join the Prism AI community on Reddit](https://www.reddit.com/r/PrismAIApp/)
+[Join the Prism AI community on Reddit](https://www.reddit.com/r/PrismAIApp/) · [Follow product updates on Instagram](https://www.instagram.com/prismhq.ai/)
 
 ---
 
