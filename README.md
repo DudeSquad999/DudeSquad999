@@ -1,5 +1,8 @@
 <div align="center">
-  <img src="assets/profile-header.svg" alt="Hi, I'm Aidan. I build tools for research, writing, and code." width="100%">
+  <picture>
+    <source srcset="https://raw.githubusercontent.com/DudeSquad999/DudeSquad999/9e44097b1a65fbe63c4928179a9a5fe07867d4e1/assets/profile-header.svg" type="image/svg+xml">
+    <img src="assets/profile-header.svg" alt="Hi, I'm Aidan. I build tools for research, writing, and code." width="100%">
+  </picture>
   <p>
     <a href="#what-im-building">Projects</a> ·
     <a href="https://dev.to/prismaidev">Development notes</a> ·
@@ -19,7 +22,10 @@ I'm Aidan, an independent developer building Prism AI and git-panic. One helps b
 ## Prism AI
 
 <a href="https://github.com/DudeSquad999/Prism-Ai">
-  <img src="assets/prism-card.svg" alt="Prism AI: research and writing with Prism Chat and Prism Studio" width="100%">
+  <picture>
+    <source srcset="https://raw.githubusercontent.com/DudeSquad999/DudeSquad999/9e44097b1a65fbe63c4928179a9a5fe07867d4e1/assets/prism-card.svg" type="image/svg+xml">
+    <img src="assets/prism-card.svg" alt="Prism AI: research and writing with Prism Chat and Prism Studio" width="100%">
+  </picture>
 </a>
 
 Keep your research organized and turn it into writing. I'm building Prism AI as an early-stage Windows workspace with two companion apps.
