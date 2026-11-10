@@ -12,43 +12,79 @@ permissions:
 
 jobs:
   check-readme-links:
-    name: Check Prism AI README links
+    name: Check profile assets and Prism documentation links
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Verify Prism AI banner and documentation links
+      - name: Validate local SVGs and README image references
         run: |
           python3 - <<'PY'
           import re
+          import xml.etree.ElementTree as ET
           from pathlib import Path
-          from urllib.request import urlopen
+
+          root = Path.cwd().resolve()
+          readme = Path("README.md").read_text(encoding="utf-8")
+          images = re.findall(r'<img\b[^>]*\bsrc="([^"]+)"', readme)
+          required = {
+              "assets/profile-header.svg",
+              "assets/prism-card.svg",
+              "assets/git-panic-card.svg",
+          }
+          missing = required - set(images)
+          if missing:
+              raise SystemExit(f"Missing README image references: {sorted(missing)}")
+          for source in images:
+              if source.startswith(("https://", "http://")):
+                  continue
+              path = (root / source).resolve()
+              if not path.is_relative_to(root) or not path.is_file():
+                  raise SystemExit(f"Missing or invalid local image: {source}")
+              if path.suffix.lower() == ".svg":
+                  svg = ET.parse(path).getroot()
+                  if svg.tag != "{http://www.w3.org/2000/svg}svg":
+                      raise SystemExit(f"Invalid SVG root: {source}")
+                  if "viewBox" not in svg.attrib:
+                      raise SystemExit(f"SVG needs a viewBox: {source}")
+                  forbidden = {"script", "foreignObject"}
+                  for element in svg.iter():
+                      if element.tag.rsplit("}", 1)[-1] in forbidden:
+                          raise SystemExit(f"Unsupported active SVG content: {source}")
+                      if any(key.lower().startswith("on") for key in element.attrib):
+                          raise SystemExit(f"SVG event handler found: {source}")
+                  print(f"OK SVG {source}")
+              else:
+                  print(f"OK image {source}")
+          PY
+
+      - name: Verify Prism AI documentation links
+        run: |
+          python3 - <<'PY'
+          import re
+          import time
+          from pathlib import Path
+          from urllib.request import Request, urlopen
 
           readme = Path("README.md").read_text(encoding="utf-8")
-          banner_match = re.search(
-              r'<img\s+src="(https://raw\.githubusercontent\.com/DudeSquad999/Prism-Ai/Main/prism-banner\.png)"',
+          urls = sorted(set(re.findall(
+              r'https://github\.com/DudeSquad999/Prism-Ai/blob/Main/[^\s)"<>]+',
               readme,
-          )
-          if not banner_match:
-              raise SystemExit("README.md is missing the canonical Prism AI banner URL.")
-
-          urls = [banner_match.group(1)]
-          urls.extend(
-              re.findall(
-                  r"https://github\.com/DudeSquad999/Prism-Ai/blob/Main/[^\s)]+",
-                  readme,
-              )
-          )
-          if len(urls) < 2:
+          )))
+          if not urls:
               raise SystemExit("README.md is missing Prism AI documentation links.")
-
           for url in urls:
-              with urlopen(url, timeout=30) as response:
-                  if response.status != 200:
-                      raise SystemExit(f"Unexpected status {response.status} for {url}")
-                  if url == banner_match.group(1) and response.headers.get_content_type() != "image/png":
-                      raise SystemExit(f"Banner URL did not return a PNG image: {url}")
-              print(f"OK {url}")
+              for attempt in range(3):
+                  try:
+                      request = Request(url, headers={"User-Agent": "profile-readme-validation"})
+                      with urlopen(request, timeout=30) as response:
+                          if response.status != 200:
+                              raise RuntimeError(f"Unexpected HTTP status: {response.status}")
+                      print(f"OK {url}")
+                      break
+                  except Exception:
+                      if attempt == 2:
+                          raise
+                      time.sleep(2 ** attempt)
           PY
