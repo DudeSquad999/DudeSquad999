@@ -1,94 +1,81 @@
 <div align="center">
-  <a href="https://github.com/DudeSquad999/Prism-Ai">
-    <img src="https://raw.githubusercontent.com/DudeSquad999/Prism-Ai/Main/prism-banner.png"
-         alt="Prism AI, a workspace for research and writing"
-         width="100%">
-  </a>
-
   <h1>Hi, I'm Aidan.</h1>
-
+  <p>Independent developer building research, writing, and developer tools.</p>
   <p>
-    Independent developer building tools for research, writing,
-    and thoughtful AI workflows.
-  </p>
-
-  <p>
-    <a href="https://github.com/DudeSquad999/Prism-Ai/releases/tag/v3.1.0">Download Prism AI 3.1.0</a>
-    · <a href="https://github.com/DudeSquad999/Prism-Ai">Explore the code</a>
-    · <a href="https://dudesquad999.github.io/Prism-Ai/">Try the browser preview</a>
+    <a href="#what-im-building">Projects</a> ·
+    <a href="https://dev.to/prismaidev">Development notes</a> ·
+    <a href="#connect-and-share-feedback">Connect</a>
   </p>
 </div>
 
-## About me
+## What I'm building
 
-I'm interested in AI tools, thoughtful interfaces, and making research
-easier to organize and turn into clear writing.
+I build tools to make complicated workflows easier to navigate—from organizing research to finding a Git commit after something goes wrong.
 
-I'm currently building Prism AI and sharing the process:
-what I'm learning, what works, and what still needs improvement.
+| Project | What it helps you do | Start here |
+| :--- | :--- | :--- |
+| [Prism AI](https://github.com/DudeSquad999/Prism-Ai) | Research and write with Markdown, LaTeX, and local or cloud AI. | [Windows release](https://github.com/DudeSquad999/Prism-Ai/releases/tag/v3.1.0) · [Browser preview](https://dudesquad999.github.io/Prism-Ai/) |
+| [git-panic](https://github.com/DudeSquad999/git-panic) | Find an earlier local Git commit and preserve it on a new branch. | [Install](https://github.com/DudeSquad999/git-panic#install) · [Beginner guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md) |
 
-## My main project: Prism AI
+## Prism AI
 
-Prism AI is an early-stage Windows research and writing workspace
-with two companion apps:
+<a href="https://github.com/DudeSquad999/Prism-Ai">
+  <img src="https://raw.githubusercontent.com/DudeSquad999/Prism-Ai/Main/prism-banner.png" alt="Prism AI — a workspace for research and writing" width="100%">
+</a>
 
-| Prism Chat | Prism Studio |
-|---|---|
-| Explore questions and organize conversations, sources, and Markdown notes. | Draft and revise LaTeX papers and presentations. |
-| Keep research material together in projects. | Review proposed edits, manage references, and compile PDFs. |
+An early-stage Windows workspace that brings research and writing together in two companion apps.
 
-Use local models through Ollama or connect your own Google Gemini,
-Anthropic, or OpenAI API key.
+- Prism Chat: explore questions and organize conversations, sources, and Markdown notes into projects.
+- Prism Studio: draft LaTeX papers and presentations, review proposed edits, manage references, and compile PDFs.
+- Model choice: use local models through Ollama, or connect your own Google Gemini, Anthropic, or OpenAI API key.
 
-- [Download the Windows release](https://github.com/DudeSquad999/Prism-Ai/releases/tag/v3.1.0)
-- [Read the installation guide](https://github.com/DudeSquad999/Prism-Ai/blob/Main/docs/installation.md)
-- [Explore the browser preview](https://dudesquad999.github.io/Prism-Ai/)
+[Download Prism AI 3.1.0](https://github.com/DudeSquad999/Prism-Ai/releases/tag/v3.1.0) · [Installation guide](https://github.com/DudeSquad999/Prism-Ai/blob/Main/docs/installation.md) · [Explore the code](https://github.com/DudeSquad999/Prism-Ai)
 
-The browser preview uses fixed examples. It does not connect to AI
-models or replace the Windows apps.
+The browser preview uses fixed examples; it does not connect to AI models or replace the Windows apps.
 
-## Another project: git-panic
+## git-panic
 
-Find an earlier commit. Give it a branch. Decide what happens next.
+> Find an earlier commit. Give it a branch. Decide what happens next.
 
-git-panic is a local Git recovery helper written in Rust for developers
-and shell-capable coding assistants. It grew out of my recovery experience
-while building Prism AI.
+A local Git recovery helper written in Rust for developers and shell-capable coding assistants. It grew out of my recovery experience while building Prism AI.
 
-- Inspect the local HEAD reflog in an interactive terminal timeline, or search it with literal text.
-- Preview a recovery target before explicitly creating a new branch at an existing commit.
-- Preserve a commit without switching branches or replacing working files.
+1. Inspect the local HEAD reflog in a terminal timeline, or search it with literal text.
+2. Preview a target commit and a proposed branch name without writing changes.
+3. Explicitly create a new branch to preserve the commit—without switching branches or replacing working files.
 
-It is not an automatic undo button: edits Git never saved, expired reflogs,
-and pruned objects may be unrecoverable. Restoring working files is a separate step.
+[Explore the code](https://github.com/DudeSquad999/git-panic) · [Install and get started](https://github.com/DudeSquad999/git-panic#install) · [Beginner and AI-assistant guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
 
-[Explore git-panic](https://github.com/DudeSquad999/git-panic)
-· [Installation and quick start](https://github.com/DudeSquad999/git-panic#install)
-· [Beginner and AI-assistant guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
+It is not an automatic undo button. Preserving a commit and restoring working files are separate steps.
 
-## Currently focused on
+## Behind the projects
+
+I'm interested in thoughtful interfaces, practical AI workflows, and making tools easier to understand—not just adding more features.
+
+My current focus:
 
 - Improving Prism's onboarding, workflows, and documentation.
 - Sharing practical demonstrations of research and writing tasks.
-- Using feedback to identify confusing interactions and rough edges.
+- Using feedback to find confusing interactions and rough edges.
 
-## Learning
+Learning: [AI Essentials 2026 — certificate of completion](https://github.com/DudeSquad999/DudeSquad999/blob/main/ai-essentials-2026-certificate.pdf).
 
-[AI Essentials 2026 certificate of completion](https://github.com/DudeSquad999/DudeSquad999/blob/main/ai-essentials-2026-certificate.pdf)
+## Connect and share feedback
 
-## Feedback and updates
+Found something confusing? Tell me what you tried, what you expected, and what happened.
 
-Feedback on Prism's workflows, onboarding, and documentation is welcome.
+[Prism AI issues](https://github.com/DudeSquad999/Prism-Ai/issues) · [git-panic issues](https://github.com/DudeSquad999/git-panic/issues)
 
-[Report a bug or suggest an improvement](https://github.com/DudeSquad999/Prism-Ai/issues)
-· [Development notes](https://dev.to/prismaidev)
-· [Instagram](https://www.instagram.com/prismhq.ai/)
-· [Reddit community](https://www.reddit.com/r/PrismAIApp/)
+[Development notes](https://dev.to/prismaidev) · [Instagram](https://www.instagram.com/prismhq.ai/) · [Reddit community](https://www.reddit.com/r/PrismAIApp/)
 
-Please leave API keys, passwords, private research, and personal
-information out of public issues.
+Please keep API keys, passwords, private research, and personal information out of public issues.
 
-> Prism AI is early-stage software. Check important AI-generated
-> claims and citations. Local inference runs on your computer after
-> setup, but some features need internet access. Cloud requests send
-> included content to your configured provider.
+<details>
+<summary>Project limitations and privacy notes</summary>
+
+- Prism AI is early-stage software. Check important AI-generated claims and citations.
+- Local inference runs on your computer after setup, but some features need internet access. Cloud requests send included content to your configured provider.
+- git-panic searches the local HEAD reflog. Edits Git never saved, expired reflogs, and pruned objects may be unrecoverable.
+- git-panic does not automatically restore working files. A recovery branch is not a backup of uncommitted edits or untracked files.
+- Using a local CLI through a cloud-backed assistant does not make the assistant session offline; review what output is sent to its provider.
+
+</details>
