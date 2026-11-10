@@ -47,6 +47,25 @@ Anthropic, or OpenAI API key.
 The browser preview uses fixed examples. It does not connect to AI
 models or replace the Windows apps.
 
+## Another project: git-panic
+
+Find an earlier commit. Give it a branch. Decide what happens next.
+
+git-panic is a local Git recovery helper written in Rust for developers
+and shell-capable coding assistants. It grew out of my recovery experience
+while building Prism AI.
+
+- Inspect the local HEAD reflog in an interactive terminal timeline, or search it with literal text.
+- Preview a recovery target before explicitly creating a new branch at an existing commit.
+- Preserve a commit without switching branches or replacing working files.
+
+It is not an automatic undo button: edits Git never saved, expired reflogs,
+and pruned objects may be unrecoverable. Restoring working files is a separate step.
+
+[Explore git-panic](https://github.com/DudeSquad999/git-panic)
+· [Installation and quick start](https://github.com/DudeSquad999/git-panic#install)
+· [Beginner and AI-assistant guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
+
 ## Currently focused on
 
 - Improving Prism's onboarding, workflows, and documentation.
