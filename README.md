@@ -1,6 +1,5 @@
 <div align="center">
-  <h1>Hi, I'm Aidan.</h1>
-  <p>I build tools for research, writing, and working with code.</p>
+  <img src="assets/profile-header.svg" alt="Hi, I'm Aidan. I build tools for research, writing, and code." width="100%">
   <p>
     <a href="#what-im-building">Projects</a> ·
     <a href="https://dev.to/prismaidev">Development notes</a> ·
@@ -10,30 +9,34 @@
 
 ## What I'm building
 
-I'm an independent developer building Prism AI and git-panic. One helps bring research and writing together. The other helps you find and preserve an earlier Git commit when something goes wrong.
+I'm Aidan, an independent developer building Prism AI and git-panic. One helps bring research and writing together. The other helps you find and preserve an earlier Git commit when something goes wrong.
 
 | Project | What it does | Get started |
 | :--- | :--- | :--- |
-| [Prism AI](https://github.com/DudeSquad999/Prism-Ai) | A Windows workspace for research, Markdown notes, and LaTeX writing with local or cloud AI. | [Download](https://github.com/DudeSquad999/Prism-Ai/releases/tag/v3.1.0) · [Browser preview](https://dudesquad999.github.io/Prism-Ai/) |
-| [git-panic](https://github.com/DudeSquad999/git-panic) | A Rust CLI for finding local Git commits and preserving them on new branches. | [Install](https://github.com/DudeSquad999/git-panic#install) · [Beginner guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md) |
+| [Prism AI](https://github.com/DudeSquad999/Prism-Ai) | A Windows workspace for research, Markdown notes, and LaTeX writing with local or cloud AI. | [Download](https://github.com/DudeSquad999/Prism-Ai/releases) · [Browser workspace](https://dudesquad999.github.io/Prism-Ai/) |
+| [git-panic](https://github.com/DudeSquad999/git-panic) | A Rust CLI for finding local Git commits and preserving them on new branches. | [Install](https://github.com/DudeSquad999/git-panic#installation) · [Beginner guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md) |
 
 ## Prism AI
 
 <a href="https://github.com/DudeSquad999/Prism-Ai">
-  <img src="https://raw.githubusercontent.com/DudeSquad999/Prism-Ai/Main/prism-banner.png" alt="Prism AI: a workspace for research and writing" width="100%">
+  <img src="assets/prism-card.svg" alt="Prism AI: research and writing with Prism Chat and Prism Studio" width="100%">
 </a>
 
-Keep your research organized and turn it into writing. Prism AI is an early-stage Windows workspace with two companion apps.
+Keep your research organized and turn it into writing. I'm building Prism AI as an early-stage Windows workspace with two companion apps.
 
 - Prism Chat: explore questions and organize conversations, sources, and Markdown notes into projects.
-- Prism Studio: draft LaTeX papers and presentations, review proposed edits, manage references, and compile PDFs.
-- Use local models through Ollama, or connect your own Google Gemini, Anthropic, or OpenAI API key.
+- Prism Studio: draft LaTeX papers and presentations, review proposed edits, manage BibTeX references, and compile PDFs with Tectonic.
+- Use local models through Ollama, or connect your own Google Gemini, Anthropic, or OpenAI API key. Chat and Studio are configured separately.
 
-[Download Prism AI 3.1.0](https://github.com/DudeSquad999/Prism-Ai/releases/tag/v3.1.0) · [Installation guide](https://github.com/DudeSquad999/Prism-Ai/blob/Main/docs/installation.md) · [Source code](https://github.com/DudeSquad999/Prism-Ai)
+[Windows releases](https://github.com/DudeSquad999/Prism-Ai/releases) · [Installation guide](https://github.com/DudeSquad999/Prism-Ai/blob/Main/docs/installation.md) · [Project repository](https://github.com/DudeSquad999/Prism-Ai)
 
-The browser preview uses fixed examples. It does not connect to AI models or replace the Windows apps.
+The browser workspace supports connecting to local Ollama for live chat. Without Ollama, Chat uses labeled sample responses. It does not replace the Windows apps or include live web search, citation verification, or document uploads. The public repository contains the browser workspace and project documentation, not the complete source for the packaged Windows apps.
 
 ## git-panic
+
+<a href="https://github.com/DudeSquad999/git-panic">
+  <img src="assets/git-panic-card.svg" alt="git-panic: find, preview, and preserve local Git commits. Decorative terminal artwork, not command output." width="100%">
+</a>
 
 > Find an earlier commit. Give it a branch. Decide what happens next.
 
@@ -43,7 +46,7 @@ I started git-panic after dealing with Git recovery while building Prism AI. It 
 2. Preview the commit and your proposed branch name without making changes.
 3. Explicitly create a new branch to preserve the commit. Your current branch and working files stay unchanged.
 
-[Source code](https://github.com/DudeSquad999/git-panic) · [Installation](https://github.com/DudeSquad999/git-panic#install) · [Beginner and AI-assistant guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
+[Source code](https://github.com/DudeSquad999/git-panic) · [Installation](https://github.com/DudeSquad999/git-panic#installation) · [Beginner and AI-assistant guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
 
 This is not an automatic undo button. Preserving a commit does not restore your working files.
 

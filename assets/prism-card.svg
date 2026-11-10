@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-labelledby="title desc">
+<title id="title">Prism AI</title><desc id="desc">Research and writing workspace. Prism Chat, Prism Studio, local and cloud AI.</desc><defs><linearGradient id="bg"><stop stop-color="#171329"/><stop offset="1" stop-color="#242044"/></linearGradient><linearGradient id="edge"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#67e8f9"/></linearGradient></defs>
+<rect x="1" y="1" width="1198" height="228" rx="20" fill="url(#bg)" stroke="#514477"/><rect x="30" y="30" width="5" height="170" rx="2" fill="url(#edge)"/>
+<g font-family="system-ui,Segoe UI,Arial,sans-serif"><text x="62" y="55" fill="#c4b5fd" font-size="14" letter-spacing="3">RESEARCH / WRITE / REFINE</text><text x="60" y="111" fill="#faf5ff" font-size="48" font-weight="700">Prism AI</text><text x="62" y="151" fill="#d2cce7" font-size="23">From a research question to a finished document.</text><text x="62" y="191" fill="#a9b7d1" font-size="17">PRISM CHAT · PRISM STUDIO · LOCAL + CLOUD AI</text></g>
+<g fill="none" stroke="url(#edge)" stroke-width="3"><path d="M1030 40L1114 185H946Z"/><path d="M1030 40V140L1114 185M1030 140L946 185"/><path d="M900 112H990M1060 112H1150" stroke-opacity=".5"/></g>
+</svg>
