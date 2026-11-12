@@ -1,123 +1,137 @@
 <div align="center">
   <img src="assets/profile-header.svg" alt="Hi, I'm Aidan. I build tools for research, writing, and code." width="100%">
-  <p>Research and writing. Local AI experiments. Tools for developers.</p>
+  <p><strong>Research & Writing</strong> · <strong>Local AI Experiments</strong> · <strong>Developer Tooling</strong></p>
   <p>
-    <a href="#find-your-project">Explore projects</a> ·
-    <a href="https://dev.to/prismaidev">Development notes</a> ·
+    <a href="#find-your-project">Explore Projects</a> &nbsp;·&nbsp;
+    <a href="https://dev.to/prismaidev">Development Notes</a> &nbsp;·&nbsp;
     <a href="#connect-and-contribute">Connect</a>
   </p>
 </div>
 
-## Hi, I'm Aidan
+---
 
-I'm the developer behind Prism AI, Prism Zero, and git-panic. I build tools that help people organize research, experiment with local AI, and work through Git recovery with an explicit preview-first workflow.
+## 👋 Hi, I'm Aidan
 
-These projects solve different problems. Pick the one that fits what you want to do.
+I'm the developer behind **Prism AI**, **Prism Zero**, and **git-panic**. I build specialized tools that help people organize research, experiment with local AI pipelines, and handle Git recovery with an explicit, preview-first workflow.
 
-## Find your project
+Each project targets a specific developer workflow. Find the one that matches what you want to build or explore below.
+
+## 🧭 Find Your Project
 
 | I want to… | Start here | First step |
 | :--- | :--- | :--- |
-| Organize research and write with AI | [Prism AI](https://github.com/DudeSquad999/Prism-Ai) | [Explore the browser workspace](https://dudesquad999.github.io/Prism-Ai/) or [see Windows releases](https://github.com/DudeSquad999/Prism-Ai/releases) |
-| Verify generated outputs and experiment with local LoRA training | [Prism Zero](https://github.com/DudeSquad999/prism-zero) | [Run the scripted quickstart](https://github.com/DudeSquad999/prism-zero#quick-start) |
-| Find and preserve an earlier Git commit | [git-panic](https://github.com/DudeSquad999/git-panic) | [Read the installation guide](https://github.com/DudeSquad999/git-panic#installation) |
+| **Organize research & write with AI** | [Prism AI](https://github.com/DudeSquad999/Prism-Ai) | [Explore the browser workspace](https://dudesquad999.github.io/Prism-Ai/) or [see Windows releases](https://github.com/DudeSquad999/Prism-Ai/releases) |
+| **Verify model outputs & train locally** | [Prism Zero](https://github.com/DudeSquad999/prism-zero) | [Run the scripted quickstart](https://github.com/DudeSquad999/prism-zero#quick-start) |
+| **Safely preview & recover Git commits** | [git-panic](https://github.com/DudeSquad999/git-panic) | [Read the installation guide](https://github.com/DudeSquad999/git-panic#installation) |
 
-## Prism AI
+---
+
+## 🔮 Prism AI
 
 <a href="https://github.com/DudeSquad999/Prism-Ai">
   <img src="assets/prism-card.svg" alt="Prism AI: research and writing with Prism Chat and Prism Studio" width="100%">
 </a>
 
-A research and writing workspace for bringing questions, source material, notes, and drafts together.
+A modular research and writing workspace designed to bring questions, source materials, notes, and LaTeX drafts together into a single unified environment.
 
-- Prism Chat: organize conversations, sources, and Markdown notes into projects.
-- Prism Studio: work on LaTeX papers and presentations, BibTeX references, and PDF compilation with Tectonic.
-- Model choices: use local Ollama models or configure your own supported cloud-provider API key. Chat and Studio have separate configuration.
+* **Prism Chat:** Organize deep conversations, sources, and Markdown notes cleanly into distinct projects.
+* **Prism Studio:** Author research papers and presentations with built-in LaTeX, BibTeX reference management, and automated PDF compilation via Tectonic.
+* **Flexible Models:** Connect local Ollama instances for offline inference or configure your own cloud-provider API keys. Chat and Studio feature independent configuration settings.
 
-[Repository](https://github.com/DudeSquad999/Prism-Ai) · [Windows releases](https://github.com/DudeSquad999/Prism-Ai/releases) · [Installation guide](https://github.com/DudeSquad999/Prism-Ai/blob/Main/docs/installation.md) · [Browser workspace](https://dudesquad999.github.io/Prism-Ai/)
+[Repository](https://github.com/DudeSquad999/Prism-Ai) · [Windows Releases](https://github.com/DudeSquad999/Prism-Ai/releases) · [Installation Guide](https://github.com/DudeSquad999/Prism-Ai/blob/Main/docs/installation.md) · [Browser Workspace](https://dudesquad999.github.io/Prism-Ai/)
 
 <details>
-<summary>Before you try Prism AI</summary>
+<summary><b>⚠️ Before you try Prism AI</b></summary>
 
-Prism AI is early-stage software. Review important AI-generated claims and citations. The browser workspace can connect to local Ollama for live chat; without Ollama, Chat uses labeled sample responses. It does not replace the Windows apps or include live web search, citation verification, or document uploads.
+Prism AI is early-stage software. Always review important AI-generated claims and citations manually. The browser workspace can connect to local Ollama for live chat; without Ollama, Chat falls back to labeled sample responses. It does not replace the standalone Windows apps or include live web search, automated citation verification, or heavy document uploads.
 
-The public repository contains the browser workspace and project documentation, not the complete source for the packaged Windows apps. Cloud requests send included content to the configured provider; local inference does not mean every feature works offline.
+The public repository contains the browser workspace and project documentation, not the full source code for the packaged Windows applications. Cloud requests send included content to your configured provider; local inference does not guarantee that every feature functions fully offline.
 
 </details>
 
-## Prism Zero
+---
+
+## ⚡ Prism Zero
 
 <a href="https://github.com/DudeSquad999/prism-zero">
-  <img src="assets/prism-zero-card.svg" alt="Prism Zero: generate locally, verify explicitly, curate examples, and train deliberately. Illustrative project card, not benchmark output." width="100%">
+  <img src="assets/prism-zero-card.svg" alt="Prism Zero: generate locally, verify explicitly, curate examples, and train deliberately." width="100%">
 </a>
 
-An offline-first Python toolkit for exploring a deliberate local AI workflow:
+An offline-first Python toolkit built for exploring deliberate, verifiable local AI workflows:
 
-1. Generate a candidate with a scripted demo or trusted local checkpoint.
-2. Verify it against explicit constraints, such as JSON Schema or exact rational arithmetic.
-3. Retry rejected candidates within a fixed budget and curate accepted examples.
-4. Review the dataset, then explicitly run local LoRA supervised fine-tuning.
+1. **Generate** a candidate output using a scripted demo or trusted local model checkpoint.
+2. **Verify** outputs against explicit hard constraints, such as JSON Schema validation or exact rational arithmetic.
+3. **Curate** accepted examples and retry rejected candidates within a controlled execution budget.
+4. **Fine-tune** locally by reviewing the compiled dataset and explicitly running local LoRA supervised fine-tuning.
 
-No hosted model API is required. Model weights and optional ML dependencies are separate.
+No hosted model API is required. Model weights and optional ML dependencies are kept completely separate.
 
-[Repository](https://github.com/DudeSquad999/prism-zero) · [Quickstart](https://github.com/DudeSquad999/prism-zero#quick-start) · [Source code](https://github.com/DudeSquad999/prism-zero/tree/main/prism_zero) · [Validation notes](https://github.com/DudeSquad999/prism-zero/blob/main/VALIDATION.md)
+[Repository](https://github.com/DudeSquad999/prism-zero) · [Quickstart](https://github.com/DudeSquad999/prism-zero#quick-start) · [Source Code](https://github.com/DudeSquad999/prism-zero/tree/main/prism_zero) · [Validation Notes](https://github.com/DudeSquad999/prism-zero/blob/main/VALIDATION.md)
 
-Passing a configured check is not proof of general correctness. Retrying a prompt does not update weights, and a successful training run does not establish improved model quality.
+*Passing a configured verification check is not a universal proof of general correctness. Retrying a prompt does not update model weights, and a successful training run does not automatically guarantee improved output quality.*
 
-## git-panic
+---
+
+## 🚨 git-panic
 
 <a href="https://github.com/DudeSquad999/git-panic">
-  <img src="assets/git-panic-card.svg" alt="git-panic: find, preview, and preserve local Git commits. Decorative terminal artwork, not command output." width="100%">
+  <img src="assets/git-panic-card.svg" alt="git-panic: find, preview, and preserve local Git commits." width="100%">
 </a>
 
 Find an earlier commit. Give it a branch. Decide what happens next.
 
-I started git-panic after dealing with Git recovery while building Prism AI. It is a local recovery CLI written in Rust.
+I built `git-panic` out of a practical need for safer, friction-free local Git recovery while developing Prism AI. It is a lightweight local recovery CLI written in Rust.
 
-- Find commits by browsing or searching the local HEAD reflog.
-- Preview the target commit and proposed branch name before writing.
-- Explicitly create a new branch without switching branches or changing working files.
+* **Browse & Search:** Locate lost or earlier commits instantly by inspecting or searching the local HEAD reflog.
+* **Preview First:** Inspect the target commit and proposed branch name safely before writing anything to disk.
+* **Explicit Branching:** Instantly create a new recovery branch without switching your active branch or altering working files.
 
-[Repository](https://github.com/DudeSquad999/git-panic) · [Installation](https://github.com/DudeSquad999/git-panic#installation) · [Beginner and AI-assistant guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
+[Repository](https://github.com/DudeSquad999/git-panic) · [Installation](https://github.com/DudeSquad999/git-panic#installation) · [Beginner & AI Guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
 
-This is not an automatic undo button. A recovery branch preserves an available commit, not uncommitted edits or untracked files.
+*Note: This is not an automatic global undo button. A recovery branch preserves an accessible commit, not uncommitted working edits or untracked files.*
 
-## All public repositories
+---
+
+## 📂 All Public Repositories
 
 | Repository | Purpose |
 | :--- | :--- |
-| [Prism-Ai](https://github.com/DudeSquad999/Prism-Ai) | Research and writing workspace, browser application, and project documentation. |
-| [prism-zero](https://github.com/DudeSquad999/prism-zero) | Candidate verification, accepted-example curation, and explicit local LoRA training. |
+| [Prism-Ai](https://github.com/DudeSquad999/Prism-Ai) | Research & writing workspace, browser application, and project docs. |
+| [prism-zero](https://github.com/DudeSquad999/prism-zero) | Candidate verification, accepted-example curation, and local LoRA training. |
 | [git-panic](https://github.com/DudeSquad999/git-panic) | Local Git commit discovery and preview-first branch preservation. |
-| [DudeSquad999](https://github.com/DudeSquad999/DudeSquad999) | This profile README, SVG artwork, and profile resources. |
+| [DudeSquad999](https://github.com/DudeSquad999/DudeSquad999) | Profile README, SVG assets, and configuration resources. |
 
-[Browse repositories on GitHub](https://github.com/DudeSquad999?tab=repositories)
+[📦 Browse all repositories on GitHub](https://github.com/DudeSquad999?tab=repositories)
 
-## What connects my projects
+---
 
-I care about clear interfaces, useful AI tools, explicit user choices, and documentation that helps people get started. The projects are separate: you do not need Prism AI to use Prism Zero or git-panic.
+## 🎯 What Drives My Work
 
-## Learning
+I care deeply about clean interfaces, high-utility local AI utilities, explicit user control, and comprehensive documentation that removes friction for developers. Each of these projects is entirely modular: **you do not need Prism AI to use Prism Zero or git-panic.**
 
-[AI Essentials 2026 certificate of completion](https://github.com/DudeSquad999/DudeSquad999/blob/main/ai-essentials-2026-certificate.pdf)
+## 📜 Certifications & Learning
 
-## Connect and contribute
+* [AI Essentials 2026 Certificate of Completion](https://github.com/DudeSquad999/DudeSquad999/blob/main/ai-essentials-2026-certificate.pdf)
 
-Bug reports, reproducible examples, documentation feedback, and focused contributions are welcome. Read each project's contribution guidelines before proposing a change.
+---
 
-[Prism AI issues](https://github.com/DudeSquad999/Prism-Ai/issues) · [Prism Zero issues](https://github.com/DudeSquad999/prism-zero/issues) · [git-panic issues](https://github.com/DudeSquad999/git-panic/issues)
+## 🤝 Connect & Contribute
 
-[Development notes](https://dev.to/prismaidev) · [Instagram](https://www.instagram.com/prismhq.ai/) · [Reddit community](https://www.reddit.com/r/PrismAIApp/)
+Bug reports, reproducible edge cases, clear documentation feedback, and focused contributions are always welcome. Please review each project's contribution guidelines before opening a pull request.
 
-Please keep API keys, passwords, private research, and personal information out of public issues. Use each project's security guidance for suspected vulnerabilities.
+[Prism AI Issues](https://github.com/DudeSquad999/Prism-Ai/issues) · [Prism Zero Issues](https://github.com/DudeSquad999/prism-zero/issues) · [git-panic Issues](https://github.com/DudeSquad999/git-panic/issues)
+
+[Dev.to Articles](https://dev.to/prismaidev) · [Instagram](https://www.instagram.com/prismhq.ai/) · [Reddit Community](https://www.reddit.com/r/PrismAIApp/)
+
+*Please keep sensitive API keys, passwords, private research, and personal information out of public issues. Use individual security policies for reporting potential vulnerabilities.*
 
 <details>
-<summary>Privacy and project limitations</summary>
+<summary><b>🔒 Privacy & Project Limitations</b></summary>
 
-- Check each repository's current documentation, tests, and release notes before relying on a feature. This profile is an overview, not a validation report.
-- Local tools used through a cloud-backed assistant do not make the assistant session offline. Review what data is sent to its provider.
-- Git edits that were never stored, expired reflogs, and pruned objects may be unrecoverable.
-- Prism Zero's verifiers check configured constraints; they are not a sandbox or a general proof of reasoning.
-- The project cards are illustrative artwork, not screenshots or performance results.
+* Always check each repository's current documentation, test suites, and release notes before relying on a feature in production. This profile serves as a high-level overview, not a formal validation report.
+* Utilizing local tools through a cloud-backed assistant does not make your external session offline; always review data transmission policies.
+* Git edits that were never stored in local history, expired reflogs, and pruned objects may remain unrecoverable.
+* Prism Zero verifiers validate against specific configured constraints only—they are not a secure sandbox or a proof of general reasoning.
+* Project cards are illustrative design artwork, not live UI screenshots or benchmark performance charts.
 
 </details>
