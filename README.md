@@ -12,9 +12,9 @@
 
 ## 👋 Hi, I'm Aidan
 
-I'm the developer behind **Prism AI**, **Prism Zero**, and **git-panic**. I build specialized tools that help people organize research, experiment with local AI pipelines, and handle Git recovery with an explicit, preview-first workflow.
+I'm the developer behind **Prism AI**, **Prism Zero**, **git-panic**, and a separate private **Prism** web-app prototype. I build focused tools for research and writing, local AI experimentation, safer Git recovery, and practical web application engineering.
 
-Each project targets a specific developer workflow. Find the one that matches what you want to build or explore below.
+Each project targets a specific workflow. The public projects are independent; the private Prism prototype is a separate web application.
 
 ## 🧭 Find Your Project
 
@@ -89,6 +89,12 @@ I built `git-panic` out of a practical need for safer, friction-free local Git r
 [Repository](https://github.com/DudeSquad999/git-panic) · [Installation](https://github.com/DudeSquad999/git-panic#installation) · [Beginner & AI Guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
 
 *Note: This is not an automatic global undo button. A recovery branch preserves an accessible commit, not uncommitted working edits or untracked files.*
+
+---
+
+## 🔐 Private Project
+
+**Prism** is a separate private web-application prototype with a Python/SQLite backend and optional Auth0, Stripe test-mode, and server-side AI integrations. It is not the same product or repository as the public Prism AI research workspace. Its README documents setup requirements, implemented safeguards, and launch blockers. Because the repository is private, there is no public source or demo link.
 
 ---
 
