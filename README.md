@@ -12,9 +12,9 @@
 
 ## 👋 Hi, I'm Aidan
 
-I'm the developer behind **Prism AI**, **Prism Zero**, **git-panic**, and a separate private **Prism** web-app prototype. I build focused tools for research and writing, local AI experimentation, safer Git recovery, and practical web application engineering.
+I'm the developer behind **Prism AI**, **Prism Zero**, **git-panic**, and several focused private prototypes, including **FolderPilot** and a separate **Prism** web application. I build practical tools for research and writing, local AI experimentation, safer Git recovery, file organization, and web application engineering.
 
-Each project targets a specific workflow. The public projects are independent; the private Prism prototype is a separate web application.
+Each project targets a distinct workflow. The public repositories are independent, and the private prototypes are separate projects rather than hidden dependencies of the public tools.
 
 ## 🧭 Find Your Project
 
@@ -80,21 +80,29 @@ No hosted model API is required. Model weights and optional ML dependencies are 
 
 Find an earlier commit. Give it a branch. Decide what happens next.
 
-I built `git-panic` out of a practical need for safer, friction-free local Git recovery while developing Prism AI. It is a lightweight local recovery CLI written in Rust.
+I built \`git-panic\` out of a practical need for safer, friction-free local Git recovery while developing Prism AI. It is a lightweight local recovery CLI written in Rust.
 
-* **Browse & Search:** Locate lost or earlier commits instantly by inspecting or searching the local HEAD reflog.
-* **Preview First:** Inspect the target commit and proposed branch name safely before writing anything to disk.
-* **Explicit Branching:** Instantly create a new recovery branch without switching your active branch or altering working files.
+* **Browse & Search:** Locate lost or earlier commits by inspecting or searching the local HEAD reflog.
+* **Preview First:** Inspect the target commit and proposed branch name before writing anything to disk.
+* **Explicit Branching:** Create a new recovery branch without switching your active branch or altering working files.
 
 [Repository](https://github.com/DudeSquad999/git-panic) · [Installation](https://github.com/DudeSquad999/git-panic#installation) · [Beginner & AI Guide](https://github.com/DudeSquad999/git-panic/blob/main/docs/guide.md)
 
-*Note: This is not an automatic global undo button. A recovery branch preserves an accessible commit, not uncommitted working edits or untracked files.*
+*Note: This is not an automatic global undo button. A recovery branch preserves an available commit, not uncommitted working edits or untracked files.*
 
 ---
 
-## 🔐 Private Project
+## 🔐 Private Development
 
-**Prism** is a separate private web-application prototype with a Python/SQLite backend and optional Auth0, Stripe test-mode, and server-side AI integrations. It is not the same product or repository as the public Prism AI research workspace. Its README documents setup requirements, implemented safeguards, and launch blockers. Because the repository is private, there is no public source or demo link.
+### FolderPilot
+
+A local-first Python desktop organizer designed to make file sorting reviewable instead of automatic. FolderPilot scans one selected folder without recursion, suggests categories from file extensions, previews exact destinations, records local move history, and offers checked undo.
+
+FolderPilot is early-stage and source-only. Windows is the intended first-release target, but Windows runtime validation and installer packaging remain outstanding. The repository is private while the safety and release work continues.
+
+### Prism
+
+A separate private web-application prototype with a Python/SQLite backend and optional Auth0, Stripe test-mode, and server-side AI integrations. It is not the same product or repository as the public Prism AI research workspace. Its README documents implemented safeguards, setup requirements, and launch blockers.
 
 ---
 
@@ -113,7 +121,7 @@ I built `git-panic` out of a practical need for safer, friction-free local Git r
 
 ## 🎯 What Drives My Work
 
-I care deeply about clean interfaces, high-utility local AI utilities, explicit user control, and comprehensive documentation that removes friction for developers. Each of these projects is entirely modular: **you do not need Prism AI to use Prism Zero or git-panic.**
+I care deeply about clean interfaces, high-utility local AI tools, explicit user control, and comprehensive documentation that removes friction for developers. Each project is modular: **you do not need Prism AI to use Prism Zero or git-panic.**
 
 ## 📜 Certifications & Learning
 
@@ -137,7 +145,7 @@ Bug reports, reproducible edge cases, clear documentation feedback, and focused 
 * Always check each repository's current documentation, test suites, and release notes before relying on a feature in production. This profile serves as a high-level overview, not a formal validation report.
 * Utilizing local tools through a cloud-backed assistant does not make your external session offline; always review data transmission policies.
 * Git edits that were never stored in local history, expired reflogs, and pruned objects may remain unrecoverable.
-* Prism Zero verifiers validate against specific configured constraints only—they are not a secure sandbox or a proof of general reasoning.
+* Prism Zero verifiers validate against specific configured constraints only; they are not a secure sandbox or a proof of general reasoning.
 * Project cards are illustrative design artwork, not live UI screenshots or benchmark performance charts.
 
 </details>
