@@ -80,7 +80,7 @@ No hosted model API is required. Model weights and optional ML dependencies are 
 
 Find an earlier commit. Give it a branch. Decide what happens next.
 
-I built \`git-panic\` out of a practical need for safer, friction-free local Git recovery while developing Prism AI. It is a lightweight local recovery CLI written in Rust.
+I built `git-panic` out of a practical need for safer, friction-free local Git recovery while developing Prism AI. It is a lightweight local recovery CLI written in Rust.
 
 * **Browse & Search:** Locate lost or earlier commits by inspecting or searching the local HEAD reflog.
 * **Preview First:** Inspect the target commit and proposed branch name before writing anything to disk.
