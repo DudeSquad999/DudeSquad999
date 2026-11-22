@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   check-readme-links:
-    name: Check profile assets and Prism documentation links
+    name: Check profile assets and Prism project links
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -59,7 +59,7 @@ jobs:
                   print(f"OK image {source}")
           PY
 
-      - name: Verify Prism AI documentation links
+      - name: Verify Prism AI project links
         run: |
           python3 - <<'PY'
           import re
@@ -68,13 +68,20 @@ jobs:
           from urllib.request import Request, urlopen
 
           readme = Path("README.md").read_text(encoding="utf-8")
-          urls = sorted(set(re.findall(
-              r'https://github\.com/DudeSquad999/Prism-Ai/blob/Main/[^\s)"<>]+',
+          expected = {
+              "https://github.com/DudeSquad999/Prism-Ai",
+              "https://github.com/DudeSquad999/Prism-Ai/releases",
+              "https://github.com/DudeSquad999/Prism-Ai/issues",
+          }
+          urls = set(re.findall(
+              r'https://github\.com/DudeSquad999/Prism-Ai(?:/(?:releases|issues))?(?=[\s)"<>?#]|$)',
               readme,
-          )))
-          if not urls:
-              raise SystemExit("README.md is missing Prism AI documentation links.")
-          for url in urls:
+              flags=re.IGNORECASE,
+          ))
+          missing = expected - urls
+          if missing:
+              raise SystemExit(f"README.md is missing Prism AI project links: {sorted(missing)}")
+          for url in sorted(expected):
               for attempt in range(3):
                   try:
                       request = Request(url, headers={"User-Agent": "profile-readme-validation"})
