@@ -69,12 +69,12 @@ jobs:
 
           readme = Path("README.md").read_text(encoding="utf-8")
           expected = {
-              "https://github.com/akahn30/Prism-Ai",
-              "https://github.com/akahn30/Prism-Ai/releases",
-              "https://github.com/akahn30/Prism-Ai/issues",
+              "https://github.com/prismai-labs/Prism-Ai",
+              "https://github.com/prismai-labs/Prism-Ai/releases",
+              "https://github.com/prismai-labs/Prism-Ai/issues",
           }
           urls = set(re.findall(
-              r'https://github\.com/akahn30/Prism-Ai(?:/(?:releases|issues))?(?=[\s)"<>?#]|$)',
+              r'https://github\.com/prismai-labs/Prism-Ai(?:/(?:releases|issues))?(?=[\s)"<>?#]|$)',
               readme,
               flags=re.IGNORECASE,
           ))
