@@ -10,7 +10,7 @@
   </p>
 
   <p>
-    <a href="https://akahn30.github.io/Prism-Ai/">Live Workspace</a> &nbsp;·&nbsp;
+    <a href="https://prismai-labs.github.io/Prism-Ai/">Live Workspace</a> &nbsp;·&nbsp;
     <a href="#featured-projects">Projects</a> &nbsp;·&nbsp;
     <a href="https://dev.to/prismaidev">Dev.to</a> &nbsp;·&nbsp;
     <a href="https://www.reddit.com/r/PrismAIApp/">Reddit</a> &nbsp;·&nbsp;
@@ -32,18 +32,18 @@ I work mostly in Python, Rust, and JavaScript, with a focus on local-first workf
 
 | I want to... | Project | Built With | Get Started |
 | :--- | :--- | :--- | :--- |
-| Research, organize notes, and write LaTeX with AI help | [Prism AI](https://github.com/akahn30/Prism-Ai) | JavaScript · LaTeX · Ollama | [Browser Workspace](https://akahn30.github.io/Prism-Ai/) · [Windows Releases](https://github.com/akahn30/Prism-Ai/releases) |
-| Generate local AI outputs, verify them, and curate training data | [Prism Zero](https://github.com/akahn30/prism-zero) | Python · PyTorch · PEFT | [Quickstart](https://github.com/akahn30/prism-zero#quick-start) · [Validation Notes](https://github.com/akahn30/prism-zero/blob/main/VALIDATION.md) |
+| Research, organize notes, and write LaTeX with AI help | [Prism AI](https://github.com/prismai-labs/Prism-Ai) | JavaScript · LaTeX · Ollama | [Browser Workspace](https://prismai-labs.github.io/Prism-Ai/) · [Windows Releases](https://github.com/prismai-labs/Prism-Ai/releases) |
+| Generate local AI outputs, verify them, and curate training data | [Prism Zero](https://github.com/prismai-labs/prism-zero) | Python · PyTorch · PEFT | [Quickstart](https://github.com/prismai-labs/prism-zero#quick-start) · [Validation Notes](https://github.com/prismai-labs/prism-zero/blob/main/VALIDATION.md) |
 | Find earlier Git commits and save them to a branch | [git-panic](https://github.com/akahn30/git-panic) | Rust · Git Reflog | [Installation](https://github.com/akahn30/git-panic#installation) · [Usage Guide](https://github.com/akahn30/git-panic/blob/main/docs/guide.md) |
 
 ---
 
 ## Featured Projects
 
-### [Prism AI](https://github.com/akahn30/Prism-Ai)
+### [Prism AI](https://github.com/prismai-labs/Prism-Ai)
 **Keep your research connected to your writing.**
 
-<a href="https://github.com/akahn30/Prism-Ai">
+<a href="https://github.com/prismai-labs/Prism-Ai">
   <img src="assets/prism-card.svg" alt="Prism AI: research and writing with Prism Chat and Prism Studio" width="100%">
 </a>
 
@@ -57,7 +57,7 @@ A modular workspace that brings project notes, source materials, AI conversation
 
 **Stack:** JavaScript · LaTeX / BibTeX · Ollama · Tectonic
 
-[Repository](https://github.com/akahn30/Prism-Ai) · [Live Browser Workspace](https://akahn30.github.io/Prism-Ai/) · [Windows Releases](https://github.com/akahn30/Prism-Ai/releases)
+[Repository](https://github.com/prismai-labs/Prism-Ai) · [Live Browser Workspace](https://prismai-labs.github.io/Prism-Ai/) · [Windows Releases](https://github.com/prismai-labs/Prism-Ai/releases)
 
 <details>
 <summary>Browser vs. desktop scope</summary>
@@ -68,10 +68,10 @@ The public repository hosts the browser workspace and documentation, not the ful
 
 ---
 
-### [Prism Zero](https://github.com/akahn30/prism-zero)
+### [Prism Zero](https://github.com/prismai-labs/prism-zero)
 **Generate locally. Verify explicitly. Train deliberately.**
 
-<a href="https://github.com/akahn30/prism-zero">
+<a href="https://github.com/prismai-labs/prism-zero">
   <img src="assets/prism-zero-card.svg" alt="Prism Zero: generate locally, verify explicitly, curate examples, and train deliberately." width="100%">
 </a>
 
@@ -86,7 +86,7 @@ An offline-first Python toolkit for local AI pipelines where generated outputs m
 
 **Stack:** Python · PyTorch · Pydantic · JSON Schema · PEFT / LoRA
 
-[Repository](https://github.com/akahn30/prism-zero) · [Quickstart](https://github.com/akahn30/prism-zero#quick-start) · [Source](https://github.com/akahn30/prism-zero/tree/main/prism_zero) · [Validation Notes](https://github.com/akahn30/prism-zero/blob/main/VALIDATION.md)
+[Repository](https://github.com/prismai-labs/prism-zero) · [Quickstart](https://github.com/prismai-labs/prism-zero#quick-start) · [Source](https://github.com/prismai-labs/prism-zero/tree/main/prism_zero) · [Validation Notes](https://github.com/prismai-labs/prism-zero/blob/main/VALIDATION.md)
 
 <details>
 <summary>What "verified" means</summary>
@@ -162,4 +162,4 @@ These are private for now, shared here as context:
 
 Start with a featured project, explore the available source, and read the docs for the decisions and limitations behind it. I share updates on [Dev.to](https://dev.to/prismaidev), [Reddit](https://www.reddit.com/r/PrismAIApp/), and [Instagram](https://www.instagram.com/prismhq.ai/).
 
-Bug reports, documentation fixes, and focused pull requests are welcome in the [Prism AI issue tracker](https://github.com/akahn30/Prism-Ai/issues).
+Bug reports, documentation fixes, and focused pull requests are welcome in the [Prism AI issue tracker](https://github.com/prismai-labs/Prism-Ai/issues).
