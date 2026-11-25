@@ -74,7 +74,7 @@ jobs:
               "https://github.com/akahn30/Prism-Ai/issues",
           }
           urls = set(re.findall(
-              r'https://github\.com/DudeSquad999/Prism-Ai(?:/(?:releases|issues))?(?=[\s)"<>?#]|$)',
+              r'https://github\.com/akahn30/Prism-Ai(?:/(?:releases|issues))?(?=[\s)"<>?#]|$)',
               readme,
               flags=re.IGNORECASE,
           ))
