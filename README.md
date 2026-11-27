@@ -34,7 +34,7 @@ I work mostly in Python, Rust, and JavaScript, with a focus on local-first workf
 | :--- | :--- | :--- | :--- |
 | Research, organize notes, and write LaTeX with AI help | [Prism AI](https://github.com/prismai-labs/Prism-Ai) | JavaScript · LaTeX · Ollama | [Browser Workspace](https://prismai-labs.github.io/Prism-Ai/) · [Windows Releases](https://github.com/prismai-labs/Prism-Ai/releases) |
 | Generate local AI outputs, verify them, and curate training data | [Prism Zero](https://github.com/prismai-labs/prism-zero) | Python · PyTorch · PEFT | [Quickstart](https://github.com/prismai-labs/prism-zero#quick-start) · [Validation Notes](https://github.com/prismai-labs/prism-zero/blob/main/VALIDATION.md) |
-| Find earlier Git commits and save them to a branch | [git-panic](https://github.com/akahn30/git-panic) | Rust · Git Reflog | [Installation](https://github.com/akahn30/git-panic#installation) · [Usage Guide](https://github.com/akahn30/git-panic/blob/main/docs/guide.md) |
+| Find earlier Git commits and save them to a branch | [Prism Git Panic](https://github.com/prismai-labs/prism-git-panic) | Rust · Git Reflog | [Installation](https://github.com/prismai-labs/prism-git-panic#installation) · [Usage Guide](https://github.com/prismai-labs/prism-git-panic/blob/main/docs/guide.md) |
 
 ---
 
@@ -97,11 +97,11 @@ Passing a verifier means an output satisfies the implemented checks. It doesn't 
 
 ---
 
-### [git-panic](https://github.com/akahn30/git-panic)
+### [Prism Git Panic](https://github.com/prismai-labs/prism-git-panic)
 **Find an earlier commit. Give it a branch. Decide what happens next.**
 
-<a href="https://github.com/akahn30/git-panic">
-  <img src="assets/git-panic-card.svg" alt="git-panic: find, preview, and preserve local Git commits." width="100%">
+<a href="https://github.com/prismai-labs/prism-git-panic">
+  <img src="assets/git-panic-card.svg" alt="Prism Git Panic: find, preview, and preserve local Git commits." width="100%">
 </a>
 
 A focused Rust CLI, built while developing Prism AI, for recovering local Git commits. It lets you inspect before changing anything.
@@ -114,7 +114,7 @@ A focused Rust CLI, built while developing Prism AI, for recovering local Git co
 
 **Stack:** Rust · Git Reflog · CLI
 
-[Repository](https://github.com/akahn30/git-panic) · [Installation](https://github.com/akahn30/git-panic#installation) · [Beginner & AI Guide](https://github.com/akahn30/git-panic/blob/main/docs/guide.md)
+[Repository](https://github.com/prismai-labs/prism-git-panic) · [Installation](https://github.com/prismai-labs/prism-git-panic#installation) · [Beginner & AI Guide](https://github.com/prismai-labs/prism-git-panic/blob/main/docs/guide.md)
 
 <details>
 <summary>Recovery limits</summary>
@@ -154,7 +154,7 @@ These are private for now, shared here as context:
 | Research & Writing | Markdown, LaTeX, BibTeX, Tectonic |
 | Developer Tooling | Git, CLI development, Windows packaging |
 
-[AI Essentials 2026 Certificate of Completion](https://github.com/akahn30/DudeSquad999/blob/main/ai-essentials-2026-certificate.pdf)
+[AI Essentials 2026 Certificate of Completion](https://github.com/akahn30/akahn30/blob/main/ai-essentials-2026-certificate.pdf)
 
 ---
 
